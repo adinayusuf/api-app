@@ -1,0 +1,40 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculate</title>
+</head>
+<body>
+<div class="card " style="width: 18rem;">
+    <div class="card-body text-center">
+        <h3 class="card-title ">Calculate</h3>
+        <hr>
+        <label>Number 1:
+            <input id="numA" type="text" name="A">
+        </label>
+        <br>
+        <hr>
+        <label>Number 2:
+            <input id="numB" type="text" name="B"></label>
+        <hr>
+        <button onclick="calculate(this)" data-action="add">+</button>
+        <button onclick="calculate(this)" data-action="subtract">-</button>
+        <button onclick="calculate(this)" data-action="multiply">*</button>
+        <button onclick="calculate(this)" data-action="divide">/</button>
+
+        <hr>
+        <div id="result">=</div>
+    </div>
+</div>
+<script> let csrftoken = '{{ csrf_token }}';</script>
+<script src = "{% static 'js/index.js' %}">
+
+</script>
+</body>
+
+</html>
